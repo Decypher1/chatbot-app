@@ -49,3 +49,32 @@ body{
     color: #000;
 }
 
+.footer form{
+    display: flex;
+}
+
+form input{
+    flex: 1;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+form button{
+    height: 50px;
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: greenyellow;
+    color: dodgerblue;
+    transition: 0.2s ease;
+} 
