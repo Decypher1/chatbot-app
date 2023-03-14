@@ -6,11 +6,7 @@
 <!-- Project Shields -->
 <div align="center">
   
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stargazers][stars-shield]][stars-url]
-  [![Issues][issues-shield]][issues-url]
-  [![MIT License][license-shield]][license-url]
+
   [![Twitter][twitter-shield]][twitter-url]
 </div>
 
@@ -160,7 +156,7 @@ This project was made possible by:
 <p align="right"><a href="#readme-top">back to top</a></p>
 <!-- Markdown Links & Images -->
 
-[twitter-shield]: https://img.shields.io/badge/-@tobisupreme-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/tobisupreme
+[twitter-shield]: https://img.shields.io/badge/-@decypher_tech-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/decypher_tech
 [twitter-url]: https://twitter.com/decypher_tech
 [javascript]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1C
 [node]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
