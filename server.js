@@ -73,6 +73,7 @@ io.on("connection", (socket) => {
 	// Ask for user's name if not provided already	
 	if (!socket.request.session[deviceId].userName) {
 		socket.emit("message", "Hello! Please enter your name");
+		
 	} else {
 		socket.emit(
 			"message",
@@ -82,13 +83,13 @@ io.on("connection", (socket) => {
 					deviceId
 					].currentOrder.join(", ")}`
 		);
-				}
+	}
 
 	let userName = socket.request.session[deviceId].userName;
 
 	//Listen for bot message
 	socket.on("message", (message) => {
-		console.log('message:', message);
+		console.log('message received:', message);
 		socket.emit("message", message);
 	});
 
@@ -142,7 +143,7 @@ io.on("connection", (socket) => {
 							deviceId: socket.request.session[deviceId].deviceId,
 							userName: socket.request.session[deviceId].userName,
 							order: socket.request.session[deviceId].currentOrder,
-							date: new Date().toLocaleString()
+							date: new Date().toLocaleString(),
 						});
 						socket.request.session[deviceId].currentOrder = [];
 					} else {
@@ -172,7 +173,7 @@ io.on("connection", (socket) => {
 					//cancel order
 				case "0":
 					const currentOrder = socket.request.session[deviceId].currentOrder.join(', ');
-					if (currentOrder.length === 0) {
+					if (currentOrder.length === 0 && orderHistory.length === 0) {
 						socket.emit(
 							"message",
 							`You have no current order.\n1. Place an order\n99. Checkout order\n98. Order history\n97. Current order\n0. Cancel order`
@@ -188,11 +189,14 @@ io.on("connection", (socket) => {
 					}
 					break;
 				default:
-					if (menu[message]) {
-						socket.request.session[deviceId].currentOrder.push(menu[message]);
+					const itemNumber = parseInt(message);
+					if (!isNaN(itemNumber) && menu[itemNumber]) {
+						socket.request.session[deviceId].currentOrder.push(
+							menu[itemNumber]
+						);
 						socket.emit(
-							"message",
-							`You have added ${menu[message]} to your order.\n1. Place an order\n99. Checkout order\n98. Order history\n97. Current order\n0. Cancel order`
+							'message',
+							`You have added ${menu[itemNumber]} to your order.\n1. Place an order \n99. Checkout order\n98. Order history\n97. Current order \n0. Cancel order`
 						);
 					} else {
 						socket.emit(
