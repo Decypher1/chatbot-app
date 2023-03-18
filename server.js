@@ -12,7 +12,7 @@ const path = require("path");
 
 
 const sessionMW = session({
-  secret: "Decypher",
+  secret: "Decypher" || CONFIG.sessionSecret,
   resave: false,
   saveUninitialized: true,
 });
