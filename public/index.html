@@ -8,30 +8,35 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="chat-container">
-				<div class="chat-header">
-					<h1>Cypher's Food</h1>
-				</div>
-				<div class="chat-body">	
-				</div>
-            
-				<div class="chat-form-container">
-					<form id="chat-form">
-						<input
-							id="msg"
-							type="text"
-							placeholder="Enter Message"
-							required
-							autofocus
-							autocomplete="off"
-						/>
-						<button class="btn">Send</button>
-					</form>
-				</div>
-			</div>
-		</div>
+		<section>
+			<header class="chat-header">
+				<div class ="header-title">
+					<i class="fas fa-comment-alt"></i>Cypher's Food</div>
+			</header>
 
+			<main class="chat-box">
+				<div class="msg left-msg">
+					<div class="msg-info">
+						<div class="msg-info-name">Decypher Bot</div>
+					</div>
+
+					<div class="msg-text">
+						<p>Hi, Welcome! What is your name?</p>
+					</div>
+				</div>
+			</main>
+			<form class="msg-inputarea">
+				<input
+				id="msg-input"
+				type="text"
+				placeholder="Enter Message"
+				required
+				autofocus
+				autocomplete="off"
+			/>
+			<button type="submit" id="btn">Send</button>
+			</form>
+		</section>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
 			integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
