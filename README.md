@@ -68,7 +68,7 @@
     - [x] Select 0 (to cancel order)
 
 - [x] When a client selects 
-    - [x] Select 1 (the bot should return a list of items from the restaturant menu)
+    - [x] Select 1 (the bot should return a list of items from the restaurant menu)
     - [x] Select 99 (the bot should return order placed message)
     - [x] Select 98 (the bot should return all placed orders)
     - [x] Select 97 (the bot should return current order)
@@ -106,7 +106,7 @@ npm install
 
 
 
-#### Update .env with [sample.env](/sample.env)
+#### Update .env with [sample.txt](/sample.txt)
 
 #### Run a development server
 
@@ -116,16 +116,13 @@ npm run start:dev
 
 or
 
-```sh
-yarn run start:dev
-```
 
 
 
 
 ### Base URL
 
-- https://chatbot-app.onrender.com
+- https://restaurantbot-41h0.onrender.com
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
